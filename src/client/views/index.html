@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!-- TODO: Refactor HTML -->
 <html lang="en">
 
 <head>
@@ -9,5 +9,78 @@
 </head>
 
 <body>
+    <header>
+        <nav class="nav__bar">
+            <ul class="nav__items">
+                <li class ="nav__li">Home</li>
+                <li class="nav__li"><a href="#form__wrapper">Form</a></li>                <li class="nav__li"><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Overlay -->
+    <div class="overlay">
+        <!-- Video -->
+        <div id="video">
+            <video src="./drone_4k.mp4" autoplay muted loop>
+            </video>
+        </div>
+        <!-- Text >> TODO: Typewriter Effect -->
+        <div class="text__content">
+            <h1>Discover the essence of travel</h1>
+            <h2>Go <strong>beyond</strong> </h2>
+        </div>
+    </div>
+
+    <!-- Section 2 Here -->
+    <div id="form__wrapper">
+        <section>
+            <!-- Form -->
+            <form autocomplete="off">
+                <h2 id="header">Where are we headed?</h2>
+
+                <label for="dateStart">
+                    <span>Start Date</span>
+                </label>
+
+                <input type="date" id="dateStart" name="dateS">
+
+                <label for="dateEnd">
+                    <span>End Date</span>
+                </label>
+
+                <input type="date" id="dateEnd" name="dateEnd">
+
+                <label for="country__names">
+                    <span>Country</span>
+                </label>
+                <input id="country__names" type="text" name="countryNames" placeholder="Enter Country">
+
+                <button id="btn__submit" type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Trip Summary -->
+    <section id="trip__summary">
+        <h2>Here's a summary of your trip...</h2>
+        <div id="img"></div>
+        <div id="country__result"></div>
+        <div id="date__start"></div>
+        <div id="date__end"></div>
+        <div id="trip__duration"></div>
+        <div id="download_btn"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer id ="footer">
+        <nav class="footer__bar">
+            <ul class="nav__items">
+                <li class="nav__li">Designed by Ibrahim Althani&copy;</li>
+                <li class="nav__li"><a href="https://github.com/althani-sa">Github</a></li>
+                <li class="nav__li"><a href="https://www.linkedin.com/in/ibrahimalthani/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
+
 </html>

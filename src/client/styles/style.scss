@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: auto;
+}
+
+body {
+  background-color: #14A371;
+  font-family: 'Merriweather', serif;
+}
+
+.nav__bar {
+  padding: 0.5rem;
+  background-color: #25F0AE;
+}
+
+.nav__items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #05573A;
+}
+
+.nav__li {
+  list-style-type: none;
+}
+
+.nav__li a {
+  text-decoration: none;
+  color: #05573A;
+}
+
+.nav__li:hover {
+  color: #A32F14;
+  text-decoration: underline;
+  text-decoration-color: rgb(20, 163, 113);
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 auto;
+}
+
+#video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#video video {
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#video:after {
+  content: '';
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.527);
+  position: absolute;
+}
+
+.text__content {
+  z-index: 20;
+  color: rgb(53, 240, 174);
+}
+
+.text__content strong {
+  color: rgba(255, 145, 0, 0.75);
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.text__content h2 {
+  color: rgb(255, 255, 255);
+}
+
+#form__wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 0.5rem;
+}
+
+#header {
+  color: black;
+  overflow: hidden;
+  margin: 1rem auto;
+  width: 45%;
+}
+
+label {
+  padding: 1rem 0 .25rem;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #000000;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  border: 2px solid #000000;
+  padding: .5rem;
+  font-size: 1em;
+  color: #05573A;
+  background-color: #35F0AE;
+}
+
+input:hover {
+  border: 2px solid #A32F14;
+}
+
+#btn__submit {
+  width: 100%;
+  border: 0;
+  background-color: #05573A;
+  color: #35F0AE;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#btn__submit:hover {
+  color: rgba(255, 145, 0, 0.75);
+}
+
+#trip__summary {
+  height: 100vh;
+  width: 100vw;
+}
+
+.footer__bar {
+  padding: 0.5rem;
+  background-color: #35F0AE;
+}
