@@ -23,7 +23,12 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: "babel-loader",
+                options: {
+                    plugins: [
+                        '@babel/transform-runtime'
+                    ]
+                }
             },
             {
                 test: /\.scss$/,
@@ -39,7 +44,7 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
         ]
     },
     plugins: [

@@ -141,10 +141,19 @@ input:hover {
 }
 
 #trip__summary {
+  display:flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
-
+#img{
+  width:50vw;
+  height:20vw;
+}
+#trip__duration{
+  padding: 1rem;
+  margin: 0.5rem;
+}
 .footer__bar {
   padding: 0.5rem;
   background-color: #35F0AE;

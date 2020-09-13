@@ -1,8 +1,3 @@
-/* TODO:
-Populate webpack configurations
-
-1. Set MODE as PROD.
-*/
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")

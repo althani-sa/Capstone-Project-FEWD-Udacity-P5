@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- TODO: Refactor HTML -->
 <html lang="en">
 
 <head>
@@ -24,7 +23,6 @@
             <video src="./drone_4k.mp4" autoplay muted loop>
             </video>
         </div>
-        <!-- Text >> TODO: Typewriter Effect -->
         <div class="text__content">
             <h1>Discover the essence of travel</h1>
             <h2>Go <strong>beyond</strong> </h2>
@@ -50,10 +48,10 @@
 
                 <input type="date" id="dateEnd" name="dateEnd">
 
-                <label for="country__names">
-                    <span>Country</span>
+                <label for="city">
+                    <span>City</span>
                 </label>
-                <input id="country__names" type="text" name="countryNames" placeholder="Enter Country">
+                <input id="city" type="text" name="countryNames" placeholder="Enter a city">
 
                 <button id="btn__submit" type="submit">Submit</button>
             </form>
@@ -63,12 +61,9 @@
     <!-- Trip Summary -->
     <section id="trip__summary">
         <h2>Here's a summary of your trip...</h2>
-        <div id="img"></div>
-        <div id="country__result"></div>
-        <div id="date__start"></div>
-        <div id="date__end"></div>
+        <div id="city__result"></div>
         <div id="trip__duration"></div>
-        <div id="download_btn"></div>
+        <img id="img">
     </section>
 
     <!-- Footer -->
@@ -81,6 +76,14 @@
             </ul>
         </nav>
     </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
 </body>
-
 </html>
