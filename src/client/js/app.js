@@ -1,4 +1,3 @@
-// import {  noEmptyFields } from "./noEmptyFields";
 import "regenerator-runtime/runtime"; // to use async-await in webpack - babel environment
 import moment from "moment"  // for time manipulation
 
