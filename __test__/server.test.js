@@ -1,8 +1,6 @@
 const request = require('supertest');
 const { app } = require('../src/server/index');
-beforeAll(() => {
-    process.env.NODE_ENV = 'test';
-})
+
 describe('Test root path', () => {
     test('It should get response with GET', async () => {
         try {
@@ -22,4 +20,4 @@ describe('Test root path', () => {
             expect(error).toMatch('error');
         }
     })
-})
+});

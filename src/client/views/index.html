@@ -11,8 +11,9 @@
     <header>
         <nav class="nav__bar">
             <ul class="nav__items">
-                <li class ="nav__li">Home</li>
-                <li class="nav__li"><a href="#form__wrapper">Form</a></li>                <li class="nav__li"><a href="#footer">Contact</a></li>
+                <li class="nav__li">Home</li>
+                <li class="nav__li"><a href="#form__wrapper">Form</a></li>
+                <li class="nav__li"><a href="#footer">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -36,22 +37,22 @@
             <form autocomplete="off">
                 <h2 id="header">Where are we headed?</h2>
 
-                <label for="dateStart">
+                <label for="date__start">
                     <span>Start Date</span>
                 </label>
 
-                <input type="date" id="dateStart" name="dateS">
+                <input type="date" id="date__start" name="start__date" required="required">
 
-                <label for="dateEnd">
+                <label for="date__end">
                     <span>End Date</span>
                 </label>
 
-                <input type="date" id="dateEnd" name="dateEnd">
+                <input type="date" id="date__end" name="end__date" required="required">
 
                 <label for="city">
                     <span>City</span>
                 </label>
-                <input id="city" type="text" name="countryNames" placeholder="Enter a city">
+                <input id="city" type="text" name="countryNames" placeholder="Enter a city" required="required">
 
                 <button id="btn__submit" type="submit">Submit</button>
             </form>
@@ -61,13 +62,13 @@
     <!-- Trip Summary -->
     <section id="trip__summary">
         <h2>Here's a summary of your trip...</h2>
+        <img id="img">
         <div id="city__result"></div>
         <div id="trip__duration"></div>
-        <img id="img">
     </section>
 
     <!-- Footer -->
-    <footer id ="footer">
+    <footer id="footer">
         <nav class="footer__bar">
             <ul class="nav__items">
                 <li class="nav__li">Designed by Ibrahim Althani&copy;</li>
@@ -84,6 +85,7 @@
                 navigator.serviceWorker.register('/service-worker.js');
             });
         }
-       </script>
+    </script>
 </body>
+
 </html>

@@ -147,8 +147,13 @@ input:hover {
   width: 100vw;
 }
 #img{
-  width:50vw;
-  height:20vw;
+  display:block;
+  max-width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  height:auto;
+  padding: auto;
+  border-radius:8px;
 }
 #trip__duration{
   padding: 1rem;
