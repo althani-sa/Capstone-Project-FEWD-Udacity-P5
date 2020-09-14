@@ -1,7 +1,7 @@
 // TODO: Refactor code using JS guidelines @Udacity -- Complete!
 require('dotenv').config();
 
-let tripInfo = {} // create an empty js object to act as an endpoint for routes
+let tripInfo = [] // create an empty js object to act as an endpoint for routes
 
 const express = require('express')
 const app = express()
@@ -21,24 +21,35 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
 });
-
-app.get('/get', (request, response) => {
+app.get('/', function(request, response) {
+    response.send('dist/index.html')
+})
+app.get('/all', (request, response) => {
     response.send(tripInfo)
     console.log("Hello?")
 })
-app.post('/post', (request, response) => {
-    tripInfo = request.body
-    console.log(request.body)
+app.post('/all', (request, response) => {
+    frontData = {
+        pixabay: request.body.pixabay,
+        geonames: request.body.geonames,
+        city: request.body.city,
+        weatherbit: request.body.weatherbit,
+        moment: request.body.checkDate
+    }
+    // testing the above.
     response.status(200).json({
         message: 'success'
     })
+    tripInfo.push(frontData)
+    response.send(tripInfo)
+    console.log(tripInfo)
 })
-
-const port =  process.env.PORT || 1412
-app.listen(port, function () {
+const port = 1412;
+const serverIsRunning = () => {
     console.log('Example app listening on port 1412!')
-})
-module.exports = {
-    app
-};
+}
+
+const server = app.listen(port, serverIsRunning)
+
+module.exports = app
 console.log("Server is running.")
