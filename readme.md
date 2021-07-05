@@ -7,6 +7,8 @@ Dependencies can be seen in `package.json`
 
 The app takes user data and outputs trip data such as weather and location information.
 
+Actively working on this project!
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install the dependencies for the Travel App Capstone.
